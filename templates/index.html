@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Form</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Input Form</h1>
+    <form action="/submit" method="POST">
+      <label for="LIMIT_BAL">Limit Balance:</label>
+      <input type="text" name="LIMIT_BAL" required /><br />
+
+      <label for="SEX">Sex:</label>
+      <input type="text" name="SEX" required /><br />
+
+      <label for="EDUCATION">Education:</label>
+      <input type="text" name="EDUCATION" required /><br />
+
+      <label for="MARRIAGE">Marriage:</label>
+      <input type="text" name="MARRIAGE" required /><br />
+
+      <label for="AGE">Age:</label>
+      <input type="text" name="AGE" required /><br />
+
+      <label for="PAY_0">Pay 0:</label>
+      <input type="text" name="PAY_0" required /><br />
+
+      <label for="PAY_2">Pay 2:</label>
+      <input type="text" name="PAY_2" required /><br />
+
+      <label for="PAY_3">Pay 3:</label>
+      <input type="text" name="PAY_3" required /><br />
+
+      <label for="PAY_4">Pay 4:</label>
+      <input type="text" name="PAY_4" required /><br />
+
+      <label for="PAY_5">Pay 5:</label>
+      <input type="text" name="PAY_5" required /><br />
+
+      <label for="PAY_6">Pay 6:</label>
+      <input type="text" name="PAY_6" required /><br />
+
+      <label for="BILL_AMT1">Bill Amount 1:</label>
+      <input type="text" name="BILL_AMT1" required /><br />
+
+      <label for="BILL_AMT2">Bill Amount 2:</label>
+      <input type="text" name="BILL_AMT2" required /><br />
+
+      <label for="BILL_AMT3">Bill Amount 3:</label>
+      <input type="text" name="BILL_AMT3" required /><br />
+
+      <label for="BILL_AMT4">Bill Amount 4:</label>
+      <input type="text" name="BILL_AMT4" required /><br />
+
+      <label for="BILL_AMT5">Bill Amount 5:</label>
+      <input type="text" name="BILL_AMT5" required /><br />
+
+      <label for="BILL_AMT6">Bill Amount 6:</label>
+      <input type="text" name="BILL_AMT6" required /><br />
+
+      <label for="PAY_AMT1">Payment Amount 1:</label>
+      <input type="text" name="PAY_AMT1" required /><br />
+
+      <label for="PAY_AMT2">Payment Amount 2:</label>
+      <input type="text" name="PAY_AMT2" required /><br />
+
+      <label for="PAY_AMT3">Payment Amount 3:</label>
+      <input type="text" name="PAY_AMT3" required /><br />
+
+      <label for="PAY_AMT4">Payment Amount 4:</label>
+      <input type="text" name="PAY_AMT4" required /><br />
+
+      <label for="PAY_AMT5">Payment Amount 5:</label>
+      <input type="text" name="PAY_AMT5" required /><br />
+
+      <label for="PAY_AMT6">Payment Amount 6:</label>
+      <input type="text" name="PAY_AMT6" required /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if prediction is not none %}
+    <h2>Prediction: {{ prediction }}</h2>
+    <h3>Probabilities: {{ probabilities }}</h3>
+    {% endif %}
+  </body>
+</html>

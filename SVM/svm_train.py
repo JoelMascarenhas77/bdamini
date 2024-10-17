@@ -28,7 +28,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 # Train the SVM model
-svm = SVC(kernel='linear')  # You can change kernel to 'rbf' or 'poly'
+svm = SVC(kernel='linear', probability=True) 
 svm.fit(X_train, y_train)
 
 with open('svm_model.pkl', 'wb') as model_file:
