@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Default Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Credit Card Default Prediction</h1>
+
+    <h2>Charts</h2>
+    <div class="chart-container">
+      <div class="chart">
+        <h3>Distribution of Credit Card Defaulters Across Different Education Levels</h3>
+        <img src="{{ url_for('static', filename='defaulters_education_distribution.png') }}" alt="Education Distribution of Defaulters">
+      </div>
+      <div class="chart">
+        <h3>Age Distribution of Credit Card Defaulters</h3>
+        <img src="{{ url_for('static', filename='defaulters_age_distribution.png') }}" alt="Age Distribution of Defaulters">
+      </div>
+    </div>
+  </body>
+</html>
